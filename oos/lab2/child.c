@@ -5,38 +5,38 @@
 
 
 int main(int argc, char* argv[]){
-    char c;
-    int fd = atoi(argv[0]);
-    float res;
-    bool flag = true;
-    while ((read(fileno(stdin), &c, 1)) >0){
-        char* buf = malloc(sizeof(char) * 50);
+    int file_descriptor = atoi(argv[0]);
+    char character;
+    float result;
+    bool is_first_number = true;
+    while ((read(fileno(stdin), &character, 1)) >0){
+        char* buffer = malloc(sizeof(char) * 50);
         int k = 0;
-        while(c != ' ' && c != '\n' && c != '\0'){
-            buf[k++] = c;
-            if(read(fileno(stdin), &c, 1) <= 0) {
-                c = EOF;
+        while(character != ' ' && character != '\n' && character != '\0'){
+            buffer[k++] = character;
+            if(read(fileno(stdin), &character, 1) <= 0) {
+                character = EOF;
                 break;
             }
         }
-        if(flag){
-            flag= false;
-            res = strtof(buf, &buf);
+        if(is_first_number){
+            is_first_number = false;
+            result = strtof(buffer, &buffer);
         }
         else {
-            float temp = strtof(buf, &buf);
-            if(temp == 0){
+            float number = strtof(buffer, &buffer);
+            if(number == 0){
                 float error = -1;
-                write(fd, &error, sizeof(float));
+                write(file_descriptor, &error, sizeof(float));
                 exit(-1);
             }
-            res /= temp;
-            if (c == '\n' || c == EOF){
-                flag = true;
-                write(fd, &res, sizeof(float));
+            result /= number;
+            if (character == '\n' || character == EOF){
+                is_first_number = true;
+                write(file_descriptor, &result, sizeof(float));
             }
         }
     }
-    close(fd);
+    close(file_descriptor);
     return 0;
 }
