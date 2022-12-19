@@ -1,0 +1,43 @@
+nodes:
+  - node:
+      id: 1
+      type: convector
+      children: 4
+      mutex: null
+      file: test1.txt
+  - node:
+      id: 2
+      type: convector
+      children: 4
+      mutex: null
+      file: test2.txt
+  - node:
+      id: 3
+      type: convector
+      children: 6
+      mutex: null
+      file: test3.txt
+  - node:
+      id: 4
+      type: combiner
+      children: 5
+      mutex: null
+      file: test1.txt test2.txt
+  - node:
+      id: 5
+      type: convector
+      children: 6
+      mutex: null
+      file: test1.txt
+  - node:
+      id: 6
+      type: combiner
+      children: 7
+      mutex: null
+      file: test1.txt test3.txt
+  - node:
+      id: 7
+      type: convector
+      children: null
+      mutex: null
+      file: test1.txt

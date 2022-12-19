@@ -1,0 +1,4 @@
+/home/machine/Desktop/MAI/os/kp/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/machine/Desktop/MAI/os/kp/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/machine/Desktop/MAI/os/kp/cmake-build-debug/CMakeFiles/kp.dir
+/home/machine/Desktop/MAI/os/kp/cmake-build-debug/CMakeFiles/test.dir
