@@ -32,7 +32,6 @@ void generator(char* arguments[]){
   char* file_name = arguments[2];
   FILE* file = fopen(file_name, "a+");
 
-  sleep(1);
   srand(time(NULL));
   int count_number = rand() % 5;
   cout << "generated number : ";

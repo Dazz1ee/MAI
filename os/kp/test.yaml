@@ -1,37 +1,31 @@
 nodes:
   - node:
       id: 1
-      type: generator
+      path: generator
       children: 4
       mutex: mute
-      file: out1.txt
   - node:
       id: 2
-      type: generator
+      path: generator
       children: 4
       mutex: mute
-      file: out1.txt
   - node:
       id: 3
-      type: generator
+      path: generator
       children: 5
       mutex: null
-      file: out2.txt
   - node:
       id: 4
-      type: convector
+      path: convector
       children: 6
       mutex: name
-      file: out1.txt
   - node:
       id: 5
-      type: convector
+      path: convector
       children: 6
       mutex: name
-      file: out2.txt
   - node:
       id: 6
-      type: combiner
-      children: null
+      path: combiner
+      children: 1
       mutex: null
-      file: out1.txt out2.txt

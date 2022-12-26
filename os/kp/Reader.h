@@ -30,11 +30,11 @@ class Reader {
     if (line != "nodes:") {
       perror("Wrong format file");
     }
-    string samples[]{"id: ", "type: ", "children: ", "mutex: ", "file: " };
-    string parametrs[5];
+    string samples[]{"id: ", "path: ", "children: ", "mutex: "};
+    string parametrs[4];
 
     while (getline(config_file, line)) {
-      for (int i = 0; i < 5; ++i) {
+      for (int i = 0; i < 4; ++i) {
         getline(config_file, line);
         parametrs[i] = getParameters(samples[i], line);
       }
@@ -64,8 +64,7 @@ class Reader {
         stoi(parametrs[0]),
         parametrs[1],
         converter(parametrs[2], ' '),
-        parametrs[3],
-        getFiles(parametrs[4] + " ")
+        parametrs[3]
     );
   }
 

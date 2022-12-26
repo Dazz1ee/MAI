@@ -28,7 +28,7 @@
 					[
 						0
 					],
-					"name" : "kp",
+					"name" : "lab6_8",
 					"targetIndexes" : 
 					[
 						0,
@@ -40,16 +40,16 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "kp::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-kp-Debug-eb15bf3d2d4fb6dbcb4d.json",
-					"name" : "kp",
+					"id" : "client::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-client-Debug-3d02c2e694d84ee920ad.json",
+					"name" : "client",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
-					"id" : "test::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-test-Debug-b37f3cc9efa7f7aea4e3.json",
-					"name" : "test",
+					"id" : "server::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-server-Debug-8e4eaf78596cdf2e87e4.json",
+					"name" : "server",
 					"projectIndex" : 0
 				}
 			]
@@ -58,8 +58,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/machine/Desktop/MAI/os/kp/cmake-build-debug",
-		"source" : "/home/machine/Desktop/MAI/os/kp"
+		"build" : "/home/machine/Desktop/MAI/os/lab6-8/cmake-build-debug",
+		"source" : "/home/machine/Desktop/MAI/os/lab6-8"
 	},
 	"version" : 
 	{

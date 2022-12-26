@@ -13,12 +13,11 @@ class Node {
     return id_ == other_node.getId();
   }
 
-  Node(int id, string type, vector<int> child_id, string mutex_name, vector<string> files) {
+  Node(int id, string path, vector<int> child_id, string mutex_name) {
     id_ = id;
-    type_ = type;
+    path_ = path;
     child_id_ = child_id;
     mutex_name_ = mutex_name;
-    files_ = files;
   }
 
   int getId(){
@@ -28,8 +27,8 @@ class Node {
   vector<int> getChildrenId(){
     return child_id_;
   }
-  string getType(){
-    return type_;
+  string getPath(){
+    return path_;
   }
   string getMutex(){
     return mutex_name_;
@@ -39,15 +38,12 @@ class Node {
     mutex_name_ = new_mutex_name;
   }
 
-  vector<string> getFiles(){
-    return files_;
-  }
+
  private:
   int id_;
-  string type_;
+  string path_;
   vector<int> child_id_;
   string mutex_name_;
-  vector<string> files_;
 };
 
 #endif //KP__NODE_H_

@@ -95,37 +95,6 @@ build kp: CXX_EXECUTABLE_LINKER__kp_Debug CMakeFiles/kp.dir/main.cpp.o
   TARGET_PDB = kp.dbg
 
 # =============================================================================
-# Object build statements for EXECUTABLE target test
-
-
-#############################################
-# Order-only phony target for test
-
-build cmake_object_order_depends_target_test: phony || CMakeFiles/test.dir
-
-build CMakeFiles/test.dir/test.cpp.o: CXX_COMPILER__test_Debug /home/machine/Desktop/MAI/os/kp/test.cpp || cmake_object_order_depends_target_test
-  DEP_FILE = CMakeFiles/test.dir/test.cpp.o.d
-  FLAGS = -g -std=gnu++17
-  OBJECT_DIR = CMakeFiles/test.dir
-  OBJECT_FILE_DIR = CMakeFiles/test.dir
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target test
-
-
-#############################################
-# Link the executable test
-
-build test: CXX_EXECUTABLE_LINKER__test_Debug CMakeFiles/test.dir/test.cpp.o
-  FLAGS = -g
-  OBJECT_DIR = CMakeFiles/test.dir
-  POST_BUILD = :
-  PRE_LINK = :
-  TARGET_FILE = test
-  TARGET_PDB = test.dbg
-
-# =============================================================================
 # Target aliases.
 
 # =============================================================================
@@ -136,7 +105,7 @@ build test: CXX_EXECUTABLE_LINKER__test_Debug CMakeFiles/test.dir/test.cpp.o
 #############################################
 # Folder: /home/machine/Desktop/MAI/os/kp/cmake-build-debug
 
-build all: phony kp test
+build all: phony kp
 
 # =============================================================================
 # Built-in targets
